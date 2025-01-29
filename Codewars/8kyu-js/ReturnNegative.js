@@ -13,10 +13,14 @@ Zero (0) is not checked for any specific sign. Negative zeros make no
 mathematical sense.
 Fundamentals
 */
-
+/*
 function makeNegative(num) {
-  // Code?
-}
+  return -Math.abs(num);
+} */
+
+const makeNegative = n => -Math.abs(n);
 
 // Testing
-console.log(makeNegative(42) == 42 ? "Pass" : "Fail: 42");
+console.log(makeNegative(42) === -42 ? "Pass" : "Fail: 42");
+console.log(makeNegative(-1) === -1 ? "Pass" : "Fail: -1");
+console.log(makeNegative(0) === 0 ? "Pass" : "Fail: 0");
