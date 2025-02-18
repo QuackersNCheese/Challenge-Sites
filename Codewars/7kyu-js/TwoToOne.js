@@ -17,7 +17,8 @@ function longest(s1, s2) {
 }*/
 
 const longest = (s1, s2) => Array.from(new Set([...(s1 + s2)])).sort().join('');
-
+// from Balkoth
+//const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 // Testing
 console.log(longest("aretheyhere", "yestheyarehere") == "aehrsty")
 console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding") == "abcdefghilnoprstu")
