@@ -11,23 +11,20 @@ IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError
 More details about factorial can be found here.
 
 AlgorithmsFundamentals*/
-function check(x) {
+/*function check(x) {
   if (x < 0 || x > 12) {
     throw new RangeError("");
   }
-}
+}*/
 function factorial(n)
 {
-  try {
-    check(n);
-    if(n === 0) 
-      return 1;
-    return n * factorial(n - 1);
-  } catch (error) {
-    return error;
-  }
+  if(n < 0 || n > 12) 
+    throw new RangeError("Out of Range");
+  if(n === 0) 
+    return 1;
+  return n * factorial(n - 1);
 }
-// !!!!!!!!! Didn't satisy challenge !!!!!!!!!!!!!!!!
+
 //let factorial = n => n === 0 ? 1 : n * factorial(n - 1);
 
 // Testing
